@@ -1,2 +1,2 @@
 # bash_scripts
-bash script examples
+bash and python script examples
