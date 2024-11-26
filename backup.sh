@@ -1,8 +1,8 @@
 #!/bin/bash
-
+#
 backupDir=("/opt" "/home/ec2-user")
 backupTarget=/tmp/backup
-
+# Создадим директорию для архивов
 mkdir -p $backupTarget
 
 for dir in "${backupDir[@]}"; 
