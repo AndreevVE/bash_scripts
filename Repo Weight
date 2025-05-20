@@ -1,0 +1,13 @@
+TOKEN="ghp_токен"
+USERNAME="твоё_имя"
+
+echo "📦 Размеры репозиториев:"
+
+curl -s -H "Authorization: token $TOKEN" \
+  "https://api.github.com/users/$USERNAME/repos?per_page=100" |
+  jq -r '.[] | "\(.name) \(.size)"' |
+  while read -r name size; do
+    size_kb=$((size))
+    size_mb=$(echo "scale=2; $size_kb/1024" | bc)
+    echo "📁 $name: $size_mb MB"
+  done
