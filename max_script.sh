@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-USER=$(Viacheslav)
+USER="Viacheslav" 
 
 CURRENT_DATE=$(date)
 
